@@ -13,7 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'PageController@home')->middleware('auth')->name('home');
-Route::get('/home', 'PageController@home')->middleware('auth')->name('home');
+Route::get('/', 'HomeController@index')->middleware('auth')->name('home');
+
+Route::get('/home', 'HomeController@index')->middleware('auth')->name('home');
+
+Route::get('/documentos', 'PageController@documentos')->middleware('auth')->name('documentos');
+
+Route::get('/biblioteca', 'PageController@biblioteca')->middleware('auth')->name('biblioteca');
 
 Auth::routes();

@@ -6,138 +6,14 @@
 
         <title>Laravel</title>
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-
-        <!-- Bootstrap CSS -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-
-        <!-- Header CSS -->
-        <link rel="stylesheet" href="{{ asset('css/header.css') }}">
-
-        <!-- Styles CSS -->
-        <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
-
-        <!-- Footer CSS -->
-        <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
+        <!-- Styles Component -->
+        <x-styles />
 
     </head>
     <body>
-        <!--
-        <div class="flex-center position-ref full-height">
-            @ if (Route::has('login'))
-                <div class="top-right links">
-                    @ auth
-                        <a href="{ { url('/') }}">Home</a>
-                    @ else
-                        <a href="{ { route('login') }}">Login</a>
 
-                        @ if (Route::has('register'))
-                            <a href="{ { route('register') }}">Register</a>
-                        @ endif
-                    @ endauth
-                </div>
-            @ endif
-        -->
-
-        <header class="">
-            <!-- Header Title and User -->
-            <nav class="navbar navbar-expand-lg navbar-light bg-principal">
-                <div class="container container-fluid">
-                <a class="navbar-brand color-white col-sm" href="#">Control de Documentos</a>
-                <button class="navbar-toggler navbar-togler-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse col-sm" id="navbarText">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle color-white" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            {{ Auth::user()->name }}
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <li><a class="dropdown-item" href="#">Mi Cuenta</a></li>
-                        <li>
-                            <a class="dropdown-item" href="{{ route('logout') }}" 
-                                onclick="event.preventDefault(); 
-                                document.getElementById('logout-form').submit();"
-                            >
-                                {{ __('Cerrar Sesión') }}
-                            </a>
-                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                @csrf
-                            </form>
-                        </li>
-                        </ul>
-                    </li>
-                    </ul>
-                </div>
-                </div>
-            </nav>
-
-            <!-- Header Navbar and Links -->
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <div class="container container-fluid">
-                <a class="navbar-brand col-sm" href="#"><img src="{{ asset('images/logo-sefar.png') }}" alt="SEFAR"></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse col-sm" id="navbarNavDropdown">
-                    <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Inicio</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Archivos
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <li><a class="dropdown-item" href="#">Documentos</a></li>
-                        <li><a class="dropdown-item" href="#">Biblioteca</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Clientes
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <li><a class="dropdown-item" href="#">Árbol Genealógico</a></li>
-                        <li><a class="dropdown-item" href="#">Busqueda por Familiares</a></li>
-                        <li><a class="dropdown-item" href="#">Últimas Actualizaciones</a></li>
-                        <li><a class="dropdown-item" href="#">-----------------------------</a></li>
-                        <li><a class="dropdown-item" href="#">Casos Asignados en Curso</a></li>
-                        <li><a class="dropdown-item" href="#">Casos Asignados Finalizados</a></li>
-                        <li><a class="dropdown-item" href="#">-----------------------------</a></li>
-                        <li><a class="dropdown-item" href="#">Seguimiento</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Directorios
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <li><a class="dropdown-item" href="#">Personal de la Empresa</a></li>
-                        <li><a class="dropdown-item" href="#">Genealogistas Internos</a></li>
-                        <li><a class="dropdown-item" href="#">Clientes</a></li>
-                        <li><a class="dropdown-item" href="#">-----------------------------</a></li>
-                        <li><a class="dropdown-item" href="#">General</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Utilidades
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <li><a class="dropdown-item" href="#">Glosario de Términos</a></li>
-                        <li><a class="dropdown-item" href="#">-----------------------------</a></li>
-                        <li><a class="dropdown-item" href="#">Enlaces</a></li>
-                        <li><a class="dropdown-item" href="#">Descargas</a></li>
-                        </ul>
-                    </li>
-                    </ul>
-                </div>
-                </div>
-            </nav>
-        </header>
+        <!-- Header Component -->
+        <x-header/>
 
         <!-- Background Image -->
         <div class="bg-body">
@@ -261,15 +137,10 @@
             </div>
         </div>
 
-        <footer>
-            <div class="container-fluid footer">
-                <p class="text-center p-3 color-white">Copyright - 2021 Todos los derechos son reservados por <a href="https://www.sefaruniversal.com/">SEFAR UNIVERSAL SL.</a></p>
-            </div>
-        </footer>
+        <!-- Footer Component -->
+        <x-footer />
 
-        <!-- Separate Popper and Bootstrap JS -->
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
-
+        <!-- Scripts Component -->
+        <x-scripts />
     </body>
 </html>

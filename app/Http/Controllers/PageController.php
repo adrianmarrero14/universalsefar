@@ -6,7 +6,13 @@ use Illuminate\Http\Request;
 
 class PageController extends Controller
 {
-    public function home(){
-        return view('home');
+    public function documentos()
+    {
+        return view('documentos');
+    }
+
+    public function biblioteca()
+    { 
+        return view('biblioteca');
     }
 }
