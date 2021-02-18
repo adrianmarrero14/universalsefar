@@ -52,11 +52,21 @@
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle color-white" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Adrian
+                            {{ Auth::user()->name }}
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         <li><a class="dropdown-item" href="#">Mi Cuenta</a></li>
-                        <li><a class="dropdown-item" href="cerrar_sesion.php">Cerrar Sesión</a></li>
+                        <li>
+                            <a class="dropdown-item" href="{{ route('logout') }}" 
+                                onclick="event.preventDefault(); 
+                                document.getElementById('logout-form').submit();"
+                            >
+                                {{ __('Cerrar Sesión') }}
+                            </a>
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                @csrf
+                            </form>
+                        </li>
                         </ul>
                     </li>
                     </ul>
