@@ -1,10 +1,10 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Familiares extends Model
+class AgClienteInicial extends Model
 {
     //
 }

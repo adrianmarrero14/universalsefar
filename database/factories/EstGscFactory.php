@@ -2,7 +2,7 @@
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
-use App\EstGsc;
+use App\Models\EstGsc;
 use Faker\Generator as Faker;
 
 $factory->define(EstGsc::class, function (Faker $faker) {

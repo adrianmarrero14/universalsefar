@@ -2,7 +2,7 @@
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
-use App\FormatoDoc;
+use App\Models\FormatoDoc;
 use Faker\Generator as Faker;
 
 $factory->define(FormatoDoc::class, function (Faker $faker) {
