@@ -1,0 +1,37 @@
+a {
+  color: #f389a5;
+}
+
+.bg-body {
+  width: 100%;
+  background-image: url("../images/inicio.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.btn-sefar {
+  background-color: #870021;
+  color: white;
+}
+.btn-sefar-blue {
+  background-color: #5bc0de;
+  color: white;
+}
+
+/* Carousel */
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+
+  opacity: .7;
+}
+
+  @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+  }
