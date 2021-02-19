@@ -2,7 +2,7 @@
     <!-- Header Title and User -->
     <nav class="navbar navbar-expand-lg navbar-light bg-principal">
         <div class="container container-fluid">
-        <a class="navbar-brand color-white col-sm" href="#">Control de Documentos</a>
+        <a class="navbar-brand color-white col-sm" href="{{ route('home') }}">Control de Documentos</a>
         <button class="navbar-toggler navbar-togler-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -35,7 +35,7 @@
     <!-- Header Navbar and Links -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container container-fluid">
-        <a class="navbar-brand col-sm" href="#"><img src="{{ asset('images/logo-sefar.png') }}" alt="SEFAR"></a>
+        <a class="navbar-brand col-sm" href="{{ route('home') }}"><img src="{{ asset('images/logo-sefar.png') }}" alt="SEFAR"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>

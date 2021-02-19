@@ -15,11 +15,7 @@
     <!-- Pubic Header -->
     <x-public-header />
 
-    {{ var_dump($doc) }}
-
-
-
-
+    EDITAR DOCUMENTO
 
     <!-- Footer Component -->
     <x-footer />
