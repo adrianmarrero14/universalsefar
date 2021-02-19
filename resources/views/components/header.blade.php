@@ -49,7 +49,7 @@
                 Archivos
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <li><a class="dropdown-item" href="{{ route('documentos') }}">Documentos</a></li>
+                <li><a class="dropdown-item" href="{{ route('documentos.index') }}">Documentos</a></li>
                 <li><a class="dropdown-item" href="{{ route('biblioteca') }}">Biblioteca</a></li>
                 </ul>
             </li>
@@ -58,9 +58,9 @@
                 Clientes
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <li><a class="dropdown-item" href="#">Árbol Genealógico</a></li>
-                <li><a class="dropdown-item" href="#">Busqueda por Familiares</a></li>
-                <li><a class="dropdown-item" href="#">Últimas Actualizaciones</a></li>
+                <li><a class="dropdown-item" href="{{ route('arbolclientes') }}">Árbol Genealógico</a></li>
+                <li><a class="dropdown-item" href="{{ route('arbolfamiliares') }}">Busqueda por Familiares</a></li>
+                <li><a class="dropdown-item" href="{{ route('arbolactualizaciones') }}">Últimas Actualizaciones</a></li>
                 <li><a class="dropdown-item" href="#">-----------------------------</a></li>
                 <li><a class="dropdown-item" href="#">Casos Asignados en Curso</a></li>
                 <li><a class="dropdown-item" href="#">Casos Asignados Finalizados</a></li>

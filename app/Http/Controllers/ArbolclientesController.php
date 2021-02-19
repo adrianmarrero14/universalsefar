@@ -3,9 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Bd;
 
-class DocumentosController extends Controller
+class ArbolclientesController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,9 +13,7 @@ class DocumentosController extends Controller
      */
     public function index()
     {
-        $documentos = Bd::latest()->paginate('10');
-
-        return view('documentos.index', compact('documentos'));
+        return view('arbolclientes');
     }
 
     /**
@@ -57,9 +54,9 @@ class DocumentosController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Bd $doc)
+    public function edit($id)
     {
-        return view('documentos.edit', compact('doc'));
+        //
     }
 
     /**

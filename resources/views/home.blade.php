@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>Control de Documentos</title>
 
         <!-- Styles Component -->
         <x-styles />
@@ -131,7 +131,7 @@
                         </p>
                     </div>
                     <div class="col-md-6 text-end">
-                        <img src="./public/images/listo.png" alt="">
+                        <img src="{{ asset('images/listo.png') }}" alt="">
                     </div>
                 </div>
             </div>

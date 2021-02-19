@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class ArbolController extends Controller
+class ArbolfamiliaresController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,7 +13,7 @@ class ArbolController extends Controller
      */
     public function index()
     {
-        //
+        return view('arbolfamiliares');
     }
 
     /**
