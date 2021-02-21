@@ -58,12 +58,12 @@
                                 <td>{{ $cliente->anho_nacimiento }}</td>
                                 <td class="text-center">
                                     <a href="">
-                                        <img src="{{ asset('images/FTM_G.png') }}" alt="Drive" width="30px">
+                                        <img src="{{ asset('images/FTM_G.png') }}" alt="FTM" width="30px">
                                     </a>
                                 </td>
                                 <td class="text-center">
                                     <a href="">
-                                        <img src="{{ asset('images/arbol.png') }}" alt="Drive" width="30px">
+                                        <img src="{{ asset('images/arbol.png') }}" alt="Árbol Genealógico" width="30px">
                                     </a>
                                 </td>
                                 <td class="text-center">

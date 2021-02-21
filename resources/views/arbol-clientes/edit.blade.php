@@ -17,7 +17,7 @@
 
     <div class="container-fluid bg-form">
         <div class="container mb-4 ">
-            <h3 class="text-center mt-2">Nombre de Cliente</h3>
+            <h3 class="text-center mt-2">Nombre de Cliente: {{ $cliente->cliente }}</h3>
             <h6 class="text-center">País / Ciudad:</h6>
             <form action="" method="post">
                 <div class="row mt-2 mb-2 pt-2">
