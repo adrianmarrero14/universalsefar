@@ -26,7 +26,7 @@ class DocumentosController extends Controller
      */
     public function create()
     {
-        //
+        return view('documentos.create');
     }
 
     /**
@@ -59,6 +59,7 @@ class DocumentosController extends Controller
      */
     public function edit(Bd $doc)
     {
+        //return var_dump($doc);
         return view('documentos.edit', compact('doc'));
     }
 

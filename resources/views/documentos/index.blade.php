@@ -15,11 +15,11 @@
     <!-- Header Component -->
     <x-header />
 
-    <div class="container-fluid">
+    <div class="container-fluid bg-form">
         <div class="container">
             <div class="row mt-4 mb-3">
                 <div class="col-md-8">
-                    <button class="btn btn-sefar-blue" type="submit">Agregar Documento</button>
+                    <a href="{{ route('documentos.create') }}" class="btn btn-sefar-blue">Agregar Documento</a>
                 </div>
                 <div class="col-md-4">
                     <form class="d-flex">

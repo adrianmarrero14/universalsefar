@@ -1,5 +1,6 @@
 <?php
 
+use GuzzleHttp\Middleware;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,18 +14,22 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'HomeController@index')->middleware('auth')->name('home');
 
-Route::get('/home', 'HomeController@index')->middleware('auth')->name('home');
+Route::redirect('/home', '/');
 
-Route::resource('documentos', 'DocumentosController')->middleware('auth');
+Route::middleware('auth')->group( function (){
 
-Route::get('/biblioteca', 'PageController@biblioteca')->middleware('auth')->name('biblioteca');
+    Route::get('/', 'HomeController@index')->name('home');
 
-Route::get('/arbol-clientes', 'ArbolclientesController@index')->middleware('auth')->name('arbolclientes');
+    Route::resource('/documentos', 'DocumentosController');
 
-Route::get('/arbol-familiares', 'ArbolfamiliaresController@index')->middleware('auth')->name('arbolfamiliares');
+    Route::get('/biblioteca', 'PageController@biblioteca')->name('biblioteca');
 
-Route::get('/arbol-actualizaciones', 'ArbolactualizacionesController@index')->middleware('auth')->name('arbolactualizaciones');
+    Route::get('/arbol-clientes', 'ArbolclientesController@index')->name('arbolclientes');
+
+    Route::get('/arbol-familiares', 'ArbolfamiliaresController@index')->name('arbolfamiliares');
+
+    Route::get('/arbol-actualizaciones', 'ArbolactualizacionesController@index')->name('arbolactualizaciones');
+});
 
 Auth::routes();

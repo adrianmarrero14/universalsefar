@@ -13,7 +13,7 @@ class ArbolclientesController extends Controller
      */
     public function index()
     {
-        return view('arbolclientes');
+        return view('arbol-clientes.index');
     }
 
     /**

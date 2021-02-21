@@ -10,6 +10,14 @@ a {
   background-repeat: no-repeat;
 }
 
+.bg-form {
+  width: 100%;
+  background-image: url("../images/fondo.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 .btn-sefar {
   background-color: #870021;
   color: white;
@@ -17,6 +25,10 @@ a {
 .btn-sefar-blue {
   background-color: #5bc0de;
   color: white;
+}
+
+.border-sefar {
+  border: 1px solid #8700226e;
 }
 
 /* Carousel */
