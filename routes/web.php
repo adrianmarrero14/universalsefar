@@ -25,7 +25,7 @@ Route::middleware('auth')->group( function (){
 
     Route::get('/biblioteca', 'PageController@biblioteca')->name('biblioteca');
 
-    Route::get('/arbol-clientes', 'ArbolclientesController@index')->name('arbolclientes');
+    Route::resource('/arbol-clientes', 'ArbolclientesController');
 
     Route::get('/arbol-familiares', 'ArbolfamiliaresController@index')->name('arbolfamiliares');
 

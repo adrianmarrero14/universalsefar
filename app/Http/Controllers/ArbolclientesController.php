@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Cliente;
 use Illuminate\Http\Request;
 
 class ArbolclientesController extends Controller
@@ -13,7 +14,9 @@ class ArbolclientesController extends Controller
      */
     public function index()
     {
-        return view('arbol-clientes.index');
+        $clientes = Cliente::latest()->paginate('10');
+
+        return view('arbol-clientes.index', compact('clientes'));
     }
 
     /**
@@ -56,7 +59,7 @@ class ArbolclientesController extends Controller
      */
     public function edit($id)
     {
-        //
+        return view('arbol-clientes.edit');
     }
 
     /**

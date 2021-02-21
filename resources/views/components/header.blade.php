@@ -58,7 +58,7 @@
                     Clientes
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <li><a class="dropdown-item" href="{{ route('arbolclientes') }}">Árbol Genealógico</a></li>
+                    <li><a class="dropdown-item" href="{{ route('arbol-clientes.index') }}">Árbol Genealógico</a></li>
                     <li><a class="dropdown-item" href="{{ route('arbolfamiliares') }}">Busqueda por Familiares</a></li>
                     <li><a class="dropdown-item" href="{{ route('arbolactualizaciones') }}">Últimas Actualizaciones</a></li>
                     <li><a class="dropdown-item" href="#">-----------------------------</a></li>
