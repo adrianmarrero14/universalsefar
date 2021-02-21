@@ -33,7 +33,7 @@
                 <table class="table table-striped table-hover">
                     <thead>
                         <tr>
-                            <th scope="col"></th>
+                            <th scope="col">#</th>
                             <th scope="col">Persona</th>
                             <th scope="col">País de Nac.</th>
                             <th scope="col">Lugar de Nac.</th>

@@ -47,8 +47,7 @@ class ArbolclientesController extends Controller
      */
     public function edit(Cliente $cliente)
     {
-        
-        return view('arbol-clientes.edit', $cliente);
+        return view('arbol-clientes.edit', compact('cliente'));
     }
 
     /**
