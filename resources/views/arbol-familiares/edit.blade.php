@@ -18,10 +18,9 @@
     <div class="container-fluid bg-form">
         <div class="container mb-4 ">
             <h3 class="text-center mt-2">{{ $familiar->nombre_familiar }}</h3>
-            <h6 class="text-center">País / Ciudad:</h6>
             <form action="" method="post">
                 <div class="row mt-2 mb-2 pt-2">
-                    <div class="col-md-4">
+                    <div class="col-md-6">
                         <div class="form-group">
                             <label for="">Nombres:</label>
                             <input type="text" class="form-control border-sefar mb-2" placeholder="Nombres"
@@ -35,11 +34,44 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="">Fecha de Registro:</label>
-                            <input type="date" class="form-control border-sefar mb-2" id="" name="">
+                            <label for="">N° Pasaporte:</label>
+                            <input type="date" class="form-control border-sefar mb-2" id="" name="" placeholder="N° Pasaporte">
+                        </div>
+                        <div class="form-group">
+                            <label for="">País de Pasaporte:</label>
+                            <input type="text" class="form-control border-sefar mb-2" placeholder="País de Pasaporte"
+                            id="" name="" value="">
                         </div>          
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="">Enlace Drive:</label>
+                            <input type="text" class="form-control border-sefar mb-2" placeholder="Enlace Drive"
+                            id="" name="" value="">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="">N° Doc. Ident.:</label>
+                            <input type="text" class="form-control border-sefar mb-2" placeholder="N° Doc. Ident."
+                            id="" name="">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="">País Doc. Ident.:</label>
+                            <input type="text" class
+                            ="form-control border-sefar mb-2" placeholder="País Doc. Ident."
+                            id="" name="">
+                        </div>
+                        <div class="form-group">
+                            <label for="">Sexo:</label>
+                            <input type="text" class
+                            ="form-control border-sefar mb-2" placeholder="Sexo"
+                            id="" name="">
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-2 pt-2">
+                    <div class="col-md-3">
                         <div class="form-group">
                             <label for="">País de Nacimiento:</label>
                             <input type="text" class="form-control border-sefar mb-2" placeholder="País de Nacimiento"
@@ -54,43 +86,73 @@
 
                         <div class="form-group">
                             <label for="">Año de Nacimiento:</label>
+                            <input type="date" class="form-control border-sefar mb-2" id="" name="" placeholder="Año de Nacimiento">
+                        </div>         
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <label for="">País de Bautizo:</label>
+                            <input type="text" class="form-control border-sefar mb-2" placeholder="País de Bautizo"
+                            id="" name="" value="">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="">Lugar de Bautizo:</label>
+                            <input type="text" class="form-control border-sefar mb-2" placeholder="Lugar de Bautizo"
+                            id="" name="">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="">Año de Bautizo:</label>
                             <input type="text" class
-                            ="form-control border-sefar mb-2" placeholder="Año de Nacimiento"
+                            ="form-control border-sefar mb-2" placeholder="Año de Bautizo"
                             id="" name="">
                         </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="col">
-                            <label for="">Enlace a Drive:</label>
-                            <input type="text" class="form-control border-sefar col mb-2" placeholder="Enlace a Drive"
-                                id="" name="" value="">
+                    </div>  
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <label for="">País de Matrimonio:</label>
+                            <input type="text" class="form-control border-sefar mb-2" placeholder="País de Matrimonio"
+                            id="" name="" value="">
                         </div>
 
                         <div class="form-group">
-                            <label for="">Familiares:</label>
-                            <input type="text" class="form-control border-sefar mb-2" placeholder="Familiares"
+                            <label for="">Lugar de Matrimonio:</label>
+                            <input type="text" class="form-control border-sefar mb-2" placeholder="Lugar de Matrimonio"
                             id="" name="">
                         </div>
 
                         <div class="form-group">
-                            <label for="">Sexo:</label>
-                            <input type="text" class="form-control border-sefar mb-2" placeholder="Sexo"
+                            <label for="">Año de Matrimonio:</label>
+                            <input type="text" class
+                            ="form-control border-sefar mb-2" placeholder="Año de Matrimonio"
                             id="" name="">
                         </div>
                     </div>
-                </div>
-                <div>
-                    <div class="text-center">
-                        <label for=""><strong>Cargado en Family Tree Maker:</strong></label>
-                        <select name="" id="">
-                            <option value="si">Si</option>
-                            <option value="no">No</option>
-                        </select>
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <label for="">País de Defunción:</label>
+                            <input type="text" class="form-control border-sefar mb-2" placeholder="País de Defunción"
+                            id="" name="" value="">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="">Lugar de Defunción:</label>
+                            <input type="text" class="form-control border-sefar mb-2" placeholder="Lugar de Defunción"
+                            id="" name="">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="">Año de Defunción:</label>
+                            <input type="text" class
+                            ="form-control border-sefar mb-2" placeholder="Año de Defunción"
+                            id="" name="">
+                        </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col">
-                        <a href="{{ route('arbol-clientes.index') }}" class="btn btn-sefar">
+                        <a href="{{ route('arbol-familiares') }}" class="btn btn-sefar">
                             Regresar
                         </a>
                     </div>

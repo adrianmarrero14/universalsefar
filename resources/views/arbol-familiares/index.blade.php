@@ -49,7 +49,7 @@
                         <tr>
                             <th scope="row">{{ $familiar->id }}</th>
                             <td>{{ $familiar->nombre_familiar }}</td>
-                            <td>Otto</td>
+                            <td>Familiar</td>
                             <td>@mdo</td>
                             <td>Mark</td>
                             <td>Otto</td>

@@ -18,7 +18,6 @@
     <div class="container-fluid bg-form">
         <div class="container mb-4">
             <h3 class="text-center mt-2">Agregar Documento</h3>
-            <h6 class="text-center">N° Identificación:</h6>
             <form action="" method="post">
                 <div class="row mt-2 mb-2 pt-2">
                     <div class="col-md-4">
@@ -236,7 +235,7 @@
                 </div>
                 <div class="row">
                     <div class="col">
-                        <a href="{{ route('documentos.index') }}" class="btn btn-sefar">
+                        <a href="{{ route('documentos') }}" class="btn btn-sefar">
                             Regresar
                         </a>
                     </div>

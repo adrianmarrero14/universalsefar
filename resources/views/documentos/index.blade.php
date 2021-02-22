@@ -19,7 +19,7 @@
         <div class="container">
             <div class="row mt-4 mb-3">
                 <div class="col-md-8">
-                    <a href="{{ route('documentos.create') }}" class="btn btn-sefar-blue">Agregar Documento</a>
+                    <a href="{{ URL::to('documentos/crear') }}" class="btn btn-sefar-blue">Agregar Documento</a>
                 </div>
                 <div class="col-md-4">
                     <form class="d-flex">
@@ -65,7 +65,7 @@
                                 </a>
                             </td>
                             <td class="text-center">
-                                <a href="{{ route('documentos.edit', $doc) }}">
+                                <a href="{{ URL::to('documentos/editar/'.$doc->id) }}">
                                     <img src="{{ asset('images/editar.png') }}" alt="Editar" width="30px">
                                 </a>
                             </td>

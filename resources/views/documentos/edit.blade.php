@@ -17,15 +17,15 @@
 
     <div class="container-fluid bg-form">
         <div class="container mb-4 ">
-            <h3 class="text-center mt-2">Título Documento{{ $doc->documento }}</h3>
-            <h6 class="text-center">N° Identificación: {{ $doc->id }}</h6>
+            <h3 class="text-center mt-2">{{ $documento->documento }}</h3>
+            <h6 class="text-center">N° Identificación: {{ $documento->id }}</h6>
             <form action="" method="post">
                 <div class="row mt-2 mb-2 pt-2">
                     <div class="col-md-4">
                         <div class="form-group">
                             <label for="">Título del Documento:</label>
                             <input type="text" class="form-control border-sefar mb-2" placeholder="Título del Documento"
-                            id="" name="" value="{{ old('documento', $doc->documento) }}">
+                            id="" name="" value="{{ old('documento', $documento->documento) }}">
                         </div>
 
                         <div class="form-group">
@@ -236,7 +236,7 @@
                 </div>
                 <div class="row">
                     <div class="col">
-                        <a href="{{ route('documentos.index') }}" class="btn btn-sefar">
+                        <a href="{{ route('documentos') }}" class="btn btn-sefar">
                             Regresar
                         </a>
                     </div>

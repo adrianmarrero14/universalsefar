@@ -8,6 +8,6 @@ class ArbolActualizacionesController extends Controller
 {
     public function index()
     {
-        return view('arbolactualizaciones');
+        return view('arbol-actualizaciones.index');
     }
 }

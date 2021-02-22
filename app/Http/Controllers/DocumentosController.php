@@ -40,16 +40,6 @@ class DocumentosController extends Controller
         //
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
 
     /**
      * Show the form for editing the specified resource.
@@ -57,10 +47,10 @@ class DocumentosController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Bd $doc)
+    public function edit($id)
     {
-        //return var_dump($doc);
-        return view('documentos.edit', compact('doc'));
+        $documento = Bd::where('id', $id)->first();
+        return view('documentos.edit', compact('documento'));
     }
 
     /**
@@ -75,14 +65,4 @@ class DocumentosController extends Controller
         return "Update";
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
-    }
 }
