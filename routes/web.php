@@ -35,10 +35,10 @@ Route::middleware('auth')->group( function (){
     Route::get('/arbol-actualizaciones', 'ArbolActualizacionesController@index')->name('arbol-actualizaciones');
 
     Route::get('/casos-asignados', 'CasosAsignadosController@index')->name('casos-asignados');
-    Route::get('/casos-asignados/editar/{id}', 'CasosAsignadosController@edit');    
+    Route::get('/casos-asignados/editar', 'CasosAsignadosController@edit');    
 
     Route::get('/casos-finalizados', 'CasosFinalizadosController@index')->name('casos-finalizados');
-    Route::get('/casos-finalizados/editar/{id}', 'CasosFinalizadosController@edit');
+    Route::get('/casos-finalizados/editar', 'CasosFinalizadosController@edit');
 });
 
 Auth::routes();
