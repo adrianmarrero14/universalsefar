@@ -30,6 +30,8 @@ Route::middleware('auth')->group( function (){
     Route::get('/biblioteca', 'PageController@biblioteca')->name('biblioteca');
 
     Route::get('/arbol-clientes', 'ArbolClientesController@index')->name('arbol-clientes');
+    Route::get('/arbol-clientes/editar/{id}', 'ArbolClientesController@edit');
+    Route::post('/arbol-clientes/update/{id}', 'ArbolClientesController@update');
 
     Route::get('/arbol-familiares', 'ArbolFamiliaresController@index')->name('arbol-familiares');
     Route::get('/arbol-familiares/editar/{id}', 'ArbolFamiliaresController@edit');

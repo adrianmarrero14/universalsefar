@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Cliente;
+use App\Models\Cliente;
 use Illuminate\Http\Request;
 
 class ArbolClientesController extends Controller
@@ -19,34 +19,14 @@ class ArbolClientesController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
      * Show the form for editing the specified resource.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Cliente $cliente)
+    public function edit($id)
     {
+        $cliente = Cliente::where('id_cliente', $id)->first();
         return view('arbol-clientes.edit', compact('cliente'));
     }
 
@@ -59,17 +39,20 @@ class ArbolClientesController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
-    }
+        $cliente = array();
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
+        $cliente['nombres'] = $request->nombres;
+        $cliente['apellidos'] = $request->apellidos;
+        $cliente['fecha_registro'] = $request->fecha_registro;
+        $cliente['pais_nacimiento'] = $request->pais_nacimiento;
+        $cliente['lugar_nacimiento'] = $request->lugar_nacimiento;
+        $cliente['anho_nacimiento'] = $request->anho_nacimiento;
+        $cliente['enlace'] = $request->enlace;
+        $cliente['familiares'] = $request->familiares;
+        $cliente['sexo'] = $request->sexo;
+
+        $cliente = Cliente::where('id_cliente', $id)->update($cliente);
+
+        return back()->with('success', 'Editado con Éxito');
     }
 }

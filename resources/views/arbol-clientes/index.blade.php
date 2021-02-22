@@ -49,10 +49,10 @@
                     <tbody>
                         @foreach ($clientes as $cliente)
                             <tr>
-                                <th scope="row">{{ $cliente->id }}</th>
+                                <th scope="row">{{ $cliente->sexo }}</th>
                                 <td>{{ $cliente->n_pasaporte }}</td>
                                 <td>{{ $cliente->fecha_registro }}</td>
-                                <td>{{ $cliente->cliente }}</td>
+                                <td>{{ $cliente->nombres }} {{ $cliente->apellidos}}</td>
                                 <td>{{ $cliente->pais_nacimiento }}</td>
                                 <td>{{ $cliente->lugar_nacimiento }}</td>
                                 <td>{{ $cliente->anho_nacimiento }}</td>
@@ -72,7 +72,7 @@
                                     </a>
                                 </td>
                                 <td class="text-center">
-                                    <a href="{{ URL::to('arbol-clientes/editar', $cliente) }}">
+                                    <a href="{{ URL::to('arbol-clientes/editar/'.$cliente->id_cliente) }}">
                                         <img src="{{ asset('images/editar.png') }}" alt="Editar" width="30px">
                                     </a>
                                 </td>
