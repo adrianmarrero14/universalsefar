@@ -42,7 +42,7 @@
             <div class="collapse navbar-collapse col-sm" id="navbarNavDropdown">
                 <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="{{ route('home') }}">Inicio</a>
+                    <a class="nav-link" aria-current="page" href="{{ route('home') }}">Inicio</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -50,7 +50,7 @@
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                     <li><a class="dropdown-item" href="{{ route('documentos') }}">Documentos</a></li>
-                    <li><a class="dropdown-item" href="{{ route('biblioteca') }}">Biblioteca</a></li>
+                    <li><a class="dropdown-item disabled" href="#" >Biblioteca</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
@@ -65,7 +65,7 @@
                     <li><a class="dropdown-item" href="{{ route('casos-asignados') }}">Casos Asignados en Curso</a></li>
                     <li><a class="dropdown-item" href="{{ route('casos-finalizados') }}">Casos Asignados Finalizados</a></li>
                     <li><a class="dropdown-item" href="#">-----------------------------</a></li>
-                    <li><a class="dropdown-item" href="#">Seguimiento</a></li>
+                    <li><a class="dropdown-item disabled" href="#">Seguimiento</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
@@ -73,11 +73,11 @@
                     Directorios
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <li><a class="dropdown-item" href="#">Personal de la Empresa</a></li>
-                    <li><a class="dropdown-item" href="#">Genealogistas Internos</a></li>
-                    <li><a class="dropdown-item" href="#">Clientes</a></li>
-                    <li><a class="dropdown-item" href="#">-----------------------------</a></li>
-                    <li><a class="dropdown-item" href="#">General</a></li>
+                    <li><a class="dropdown-item disabled" href="#">Personal de la Empresa</a></li>
+                    <li><a class="dropdown-item disabled" href="#">Genealogistas Internos</a></li>
+                    <li><a class="dropdown-item disabled" href="#">Clientes</a></li>
+                    <li><a class="dropdown-item disabled" href="#">-----------------------------</a></li>
+                    <li><a class="dropdown-item disabled" href="#">General</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
@@ -85,10 +85,10 @@
                     Utilidades
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <li><a class="dropdown-item" href="#">Glosario de Términos</a></li>
-                    <li><a class="dropdown-item" href="#">-----------------------------</a></li>
-                    <li><a class="dropdown-item" href="#">Enlaces</a></li>
-                    <li><a class="dropdown-item" href="#">Descargas</a></li>
+                    <li><a class="dropdown-item disabled" href="#">Glosario de Términos</a></li>
+                    <li><a class="dropdown-item disabled" href="#">-----------------------------</a></li>
+                    <li><a class="dropdown-item disabled" href="#">Enlaces</a></li>
+                    <li><a class="dropdown-item disabled" href="#">Descargas</a></li>
                     </ul>
                 </li>
                 </ul>

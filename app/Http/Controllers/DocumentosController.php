@@ -14,8 +14,7 @@ class DocumentosController extends Controller
      */
     public function index()
     {
-        $documentos = Bd::latest()->paginate('10');
-
+        $documentos = Bd::latest()->orderBy('fecha_incorporacion', 'desc')->paginate('10');
         return view('documentos.index', compact('documentos'));
     }
 
