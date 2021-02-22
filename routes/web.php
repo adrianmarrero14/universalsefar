@@ -25,11 +25,12 @@ Route::middleware('auth')->group( function (){
 
     Route::get('/biblioteca', 'PageController@biblioteca')->name('biblioteca');
 
-    Route::resource('arbol-clientes', 'ArbolclientesController')->except('show');
+    Route::resource('arbol-clientes', 'ArbolClientesController')->except('show');
 
-    Route::get('/arbol-familiares', 'ArbolfamiliaresController@index')->name('arbolfamiliares');
+    Route::get('arbol-familiares', 'ArbolFamiliaresController@index')->name('arbol-familiares');
+    Route::get('arbol-familiares/editar/{id}', 'ArbolFamiliaresController@edit');
 
-    Route::get('/arbol-actualizaciones', 'ArbolactualizacionesController@index')->name('arbolactualizaciones');
+    Route::get('/arbol-actualizaciones', 'ArbolActualizacionesController@index')->name('arbolactualizaciones');
 });
 
 Auth::routes();

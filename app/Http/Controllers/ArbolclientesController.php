@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Cliente;
 use Illuminate\Http\Request;
 
-class ArbolclientesController extends Controller
+class ArbolClientesController extends Controller
 {
     /**
      * Display a listing of the resource.
