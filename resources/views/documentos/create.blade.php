@@ -13,7 +13,7 @@
 <body>
         
     <!-- Pubic Header -->
-    <x-public-header />
+    <x-public-header /> 
 
     <div class="container-fluid bg-form">
         <div class="container mb-4">
