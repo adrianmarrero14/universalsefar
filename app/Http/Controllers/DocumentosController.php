@@ -37,7 +37,36 @@ class DocumentosController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $documento = array();
+
+        $documento['documento'] = $request->documento;
+        $documento['responsabilidad'] = $request->responsabilidad;
+        $documento['titulo_revista'] = $request->titulo_revista;
+        $documento['coleccion'] = $request->coleccion;
+        $documento['fuente'] = $request->fuente;
+        $documento['origen'] = $request->origen;
+        $documento['notas'] = $request->notas;
+        $documento['ubicacion'] = $request->ubicacion;
+        $documento['ubicacion_ant'] = $request->ubicacion_ant;
+        $documento['editorial'] = $request->editorial;
+        $documento['colacion'] = $request->colacion;
+        $documento['isbn'] = $request->isbn;
+        $documento['fecha_incorporacion'] = $request->fecha_incorporacion;
+        $documento['enlace'] = $request->enlace;
+        $documento['anho_ini'] = $request->anho_ini;
+        $documento['anho_fin'] = $request->anho_fin;
+        $documento['formato'] = $request->formato;
+        $documento['anho_publicacion'] = $request->anho_publicacion;
+        $documento['no_vol'] = $request->no_vol;
+        $documento['tipo'] = $request->tipo;
+        $documento['pais'] = $request->pais;
+        $documento['edicion'] = $request->edicion;
+        $documento['ciudad'] = $request->ciudad;
+        $documento['busqueda'] = $request->busqueda;
+
+        $documento = Bd::insert($documento);
+
+        return back()->with('success', 'Creado con Éxito');
     }
 
 
@@ -60,9 +89,38 @@ class DocumentosController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Bd $doc)
+    public function update(Request $request, $id)
     {
-        return "Update";
+        $documento = array();
+
+        $documento['documento'] = $request->documento;
+        $documento['responsabilidad'] = $request->responsabilidad;
+        $documento['titulo_revista'] = $request->titulo_revista;
+        $documento['coleccion'] = $request->coleccion;
+        $documento['fuente'] = $request->fuente;
+        $documento['origen'] = $request->origen;
+        $documento['notas'] = $request->notas;
+        $documento['ubicacion'] = $request->ubicacion;
+        $documento['ubicacion_ant'] = $request->ubicacion_ant;
+        $documento['editorial'] = $request->editorial;
+        $documento['colacion'] = $request->colacion;
+        $documento['isbn'] = $request->isbn;
+        $documento['fecha_incorporacion'] = $request->fecha_incorporacion;
+        $documento['enlace'] = $request->enlace;
+        $documento['anho_ini'] = $request->anho_ini;
+        $documento['anho_fin'] = $request->anho_fin;
+        $documento['formato'] = $request->formato;
+        $documento['anho_publicacion'] = $request->anho_publicacion;
+        $documento['no_vol'] = $request->no_vol;
+        $documento['tipo'] = $request->tipo;
+        $documento['pais'] = $request->pais;
+        $documento['edicion'] = $request->edicion;
+        $documento['ciudad'] = $request->ciudad;
+        $documento['busqueda'] = $request->busqueda;
+
+        $documento = Bd::where('id', $id)->update($documento);
+
+        return back()->with('success', 'Editado con Éxito');
     }
 
 }

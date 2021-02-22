@@ -23,7 +23,9 @@ Route::middleware('auth')->group( function (){
 
     Route::get('/documentos', 'DocumentosController@index')->name('documentos');
     Route::get('/documentos/editar/{id}', 'DocumentosController@edit');
+    Route::post('/documentos/update/{id}', 'DocumentosController@update');
     Route::get('/documentos/crear', 'DocumentosController@create');
+    Route::post('/documentos/store', 'DocumentosController@store');
 
     Route::get('/biblioteca', 'PageController@biblioteca')->name('biblioteca');
 
