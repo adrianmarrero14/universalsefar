@@ -72,7 +72,7 @@
                                     </a>
                                 </td>
                                 <td class="text-center">
-                                    <a href="{{ route('arbol-clientes.edit', $cliente) }}">
+                                    <a href="{{ URL::to('arbol-clientes/editar', $cliente) }}">
                                         <img src="{{ asset('images/editar.png') }}" alt="Editar" width="30px">
                                     </a>
                                 </td>

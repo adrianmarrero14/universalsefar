@@ -51,7 +51,7 @@
                             <div class="carousel-caption text-start">
                                 <h1>DOCUMENTOS</h1>
                                 <p>La intención de este buscador es indexar toda la información contenida en la unidad de almacenamiento de Google Drive nombrada actualmente “0002 ARCHIVOS CRISANTO”. Su uso es intuitivo y práctico.</p>
-                                <a href="http://localhost/sefaruniversalclean/src/pages/documentos.php" class="btn btn-sefar">Ir a <strong>Documentos</strong></a>
+                                <a href="{{ route('documentos')}}" class="btn btn-sefar">Ir a <strong>Documentos</strong></a>
                             </div>
                         </div>
                     </div>
@@ -64,7 +64,7 @@
                             <div class="carousel-caption">
                                 <h1>CLIENTES - ÁRBOL GENEALÓGICO</h1>
                                 <p>En esta página se pueden realizar búsquedas de documentos aportados por los clientes, a partir de datos como su nombre, apellidos y número de pasaporte. Su uso es intuitivo y práctico.</p>
-                                <a href="https://es.wikipedia.org/wiki/Dise%C3%B1o_web_adaptable" class="btn btn-sefar">Ir a <strong>Árbol Genealógico</strong></a>
+                                <a href="{{ route('arbol-clientes') }}" class="btn btn-sefar">Ir a <strong>Árbol Genealógico</strong></a>
                             </div>
                         </div>
                     </div>
@@ -77,7 +77,7 @@
                             <div class="carousel-caption">
                                 <h1>CLIENTES - BÚSQUEDA POR FAMILIARES</h1>
                                 <p>Esta página es muy similar a Clientes – Árbol Genealógico, pero no solo permite buscar a los clientes sino también a sus familiares, es muy práctica para investigar parentescos entre clientes.</p>
-                                <a href="https://es.wikipedia.org/wiki/Dise%C3%B1o_web_adaptable" class="btn btn-sefar">Ir a <strong>Búsqueda por Familiares</strong></a>
+                                <a href="{{ route('arbol-familiares') }}" class="btn btn-sefar">Ir a <strong>Búsqueda por Familiares</strong></a>
                             </div>
                         </div>
                     </div>
@@ -90,7 +90,7 @@
                             <div class="carousel-caption text-end">
                                 <h1>CLIENTES - CASOS ASIGNADOS EN CURSO</h1>
                                 <p>Con la finalidad de realizar un seguimiento eficiente a las solicitudes de mayor estudio genealógico para los clientes que lo requieran, se tiene dispuesto un módulo para su respectivo control.</p>
-                                <a href="https://es.wikipedia.org/wiki/Dise%C3%B1o_web_adaptable" class="btn btn-sefar">Ir a <strong>Casos Asignados en Curso</strong></a>
+                                <a href="{{ route('casos-asignados') }}" class="btn btn-sefar">Ir a <strong>Casos Asignados en Curso</strong></a>
                             </div>
                         </div>
                     </div>
@@ -103,7 +103,7 @@
                             <div class="carousel-caption text-end">
                                 <h1>CLIENTES - CASOS ASIGNADOS FINALIZADOS</h1>
                                 <p>Esta página es muy similar a Clientes – Casos asignado en curso , pero con la diferencia que solo muestra los casos de estudio genealógicos finalizados con sus respectivos resultados.</p>
-                                <a href="https://es.wikipedia.org/wiki/Dise%C3%B1o_web_adaptable" class="btn btn-sefar">Ir a <strong>Casos Asignados Finalizados</strong></a>
+                                <a href="{{ route('casos-finalizados') }}" class="btn btn-sefar">Ir a <strong>Casos Asignados Finalizados</strong></a>
                             </div>
                         </div>
                     </div>

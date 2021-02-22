@@ -29,7 +29,7 @@ Route::middleware('auth')->group( function (){
 
     Route::get('/biblioteca', 'PageController@biblioteca')->name('biblioteca');
 
-    Route::resource('arbol-clientes', 'ArbolClientesController')->except('show');
+    Route::get('/arbol-clientes', 'ArbolClientesController@index')->name('arbol-clientes');
 
     Route::get('/arbol-familiares', 'ArbolFamiliaresController@index')->name('arbol-familiares');
     Route::get('/arbol-familiares/editar/{id}', 'ArbolFamiliaresController@edit');
