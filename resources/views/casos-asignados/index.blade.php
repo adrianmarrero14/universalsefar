@@ -49,42 +49,35 @@
                         </tr>
                     </thead>
                     <tbody>
-                        
+                        @foreach ($casos as $caso)    
                             <tr>
-                                <td class="text-center">
-                                    <a href="">
-                                        <img src="{{ asset('images/FTM_G.png') }}" alt="FTM" width="30px">
-                                    </a>
-                                </td>
-                                <td class="text-center">
-                                    <a href="">
-                                        <img src="{{ asset('images/FTM_G.png') }}" alt="FTM" width="30px">
-                                    </a>
-                                </td>
-                                <td>{}</td>
-                                <td>{}</td>
-                                <td>{}</td>
-                                <td>{}</td>
-                                <td>{}</td>
-                                <td>{}</td>
-                                <td>{}</td>
-                                <td>{}</td>
+                                <td>{{ $caso->sexo }}</td>
+                                <td>{{ $caso->pais_nacimiento }}</td>
+                                <td>{{ $caso->id_cliente }}</td>
+                                <td>{{ $caso->cliente }}</td>
+                                <td>{{ $caso->etiqueta }}</td>
+                                <td>{{ $caso->fecha_registro }}</td>
+                                <td>{{ $caso->gen_ext }}</td>
+                                <td>{{ $caso->fecha_entrada }}</td>
+                                <td>{{ $caso->lugar_nacimiento }}</td>
+                                <td>{{ $caso->est_caso_ge }}</td>
                                 <td class="text-center">
                                     <a href="">
                                         <img src="{{ asset('images/arbol.png') }}" alt="Árbol Genealógico" width="30px">
                                     </a>
                                 </td>
                                 <td class="text-center">
-                                    <a href="">
+                                    <a href="{{ $caso->enlace }}">
                                         <img src="{{ asset('images/drive.png') }}" alt="Drive" width="30px">
                                     </a>
                                 </td>
                                 <td class="text-center">
-                                    <a href="{{ URL::to('casos-asignados/editar') }}">
+                                    <a href="{{ URL::to('casos-asignados/editar/'.$caso->id) }}">
                                         <img src="{{ asset('images/editar.png') }}" alt="Editar" width="30px">
                                     </a>
                                 </td>
                             </tr> 
+                        @endforeach
                           
                     </tbody>
                 </table>
