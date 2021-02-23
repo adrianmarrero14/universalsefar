@@ -47,17 +47,21 @@
                     <tbody>
                         @foreach ($familiares as $familiar)
                         <tr>
-                            <th scope="row">{{ $familiar->id }}</th>
-                            <td>{{ $familiar->nombre_familiar }}</td>
-                            <td>Familiar</td>
-                            <td>@mdo</td>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                            <td>Mark</td>
+                            <th scope="row">{{ $familiar->sexo }}</th>
+                            <td>{{ $familiar->nombres }} {{ $familiar->apellidos }}</td>
+                            <td>{{ $familiar->pais_nacimiento }}</td>
+                            <td>{{ $familiar->lugar_nacimiento }}</td>
+                            <td>{{ $familiar->anho_nacimiento }}</td>
+                            <td>{{ $familiar->id_cliente }}</td>
+                            <td>{{ $familiar->parentesco_f }}</td>
+                            <td class="text-center">
+                                <a href="">
+                                    <img src="{{ asset('images/arbol.png') }}" alt="Árbol Genealógico" width="30px">
+                                </a>
+                            </td class="text-center">
                             <td>
-                                <a href="{{ URL::to('arbol-familiares/editar/'.$familiar->id) }}">
-                                Editar
+                                <a href="{{ URL::to('arbol-familiares/editar/'.$familiar->id_general) }}">
+                                    <img src="{{ asset('images/editar.png') }}" alt="Editar" width="30px">
                                 </a>
                             </td>
                         </tr>

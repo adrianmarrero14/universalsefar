@@ -35,6 +35,7 @@ Route::middleware('auth')->group( function (){
 
     Route::get('/arbol-familiares', 'ArbolFamiliaresController@index')->name('arbol-familiares');
     Route::get('/arbol-familiares/editar/{id}', 'ArbolFamiliaresController@edit');
+    Route::post('/arbol-familiares/update/{id}', 'ArbolFamiliaresController@update');
 
     Route::get('/arbol-actualizaciones', 'ArbolActualizacionesController@index')->name('arbol-actualizaciones');
 
