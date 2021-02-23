@@ -33,139 +33,37 @@
                 <table class="table table-striped table-hover">
                     <thead>
                         <tr>
-                            <th scope="col"></th>
-                            <th scope="col">Persona</th>
-                            <th scope="col">País Nac.</th>
-                            <th scope="col">Lugar de Nac.</th>
-                            <th scope="col">Año de Nac.</th>
-                            <th scope="col">ID Cliente</th>
-                            <th scope="col">Parentesco</th>
-                            <th scope="col">Árbol</th>
-                            <th scope="col">Actualizado</th>
-                            <th scope="col">Usuario</th>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Persona</th>
+                                <th scope="col">País de Nac.</th>
+                                <th scope="col">Lugar de Nac.</th>
+                                <th scope="col">Año de Nac.</th>
+                                <th scope="col">ID del Cliente</th>
+                                <th scope="col">Parentesco</th>
+                                <th scope="col">Árbol</th>
+                                <th scope="col">Actualizado</th>
+                            </tr>
                         </tr>
                     </thead>
                     <tbody>
+                        @foreach ($familiares as $familiar) 
                         <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
+                            <th scope="row">{{ $familiar->sexo }}</th>
+                            <td>{{ $familiar->nombres }} {{ $familiar->apellidos }}</td>
+                            <td>{{ $familiar->pais_nacimiento }}</td>
+                            <td>{{ $familiar->lugar_nacimiento }}</td>
+                            <td>{{ $familiar->anho_nacimiento }}</td>
+                            <td>{{ $familiar->id_cliente }}</td>
+                            <td>{{ $familiar->parentesco_f }}</td>
+                            <td class="text-center">
+                                <a href="">
+                                    <img src="{{ asset('images/arbol.png') }}" alt="Árbol Genealógico" width="30px">
+                                </a>
+                            </td class="text-center">
+                            <td>{{ $familiar->f_registro }}</td>
                         </tr>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                        </tr>
+                        @endforeach
                     </tbody>
                 </table>
                 <nav aria-label="..." class="mb-4">
