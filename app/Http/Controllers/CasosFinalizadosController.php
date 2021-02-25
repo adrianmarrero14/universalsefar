@@ -2,17 +2,20 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Cliente;
 use Illuminate\Http\Request;
 
 class CasosFinalizadosController extends Controller
 {
     public function index()
     {
-        return view('casos-finalizados.index');
+        $casos = Cliente::latest()->where('est_caso_ge','=','finalizado')->paginate('10');
+        return view('casos-finalizados.index', compact('casos'));
     }
 
-    public function edit()
+    public function show($id)
     {
-        return view('casos-finalizados.edit');
+        $caso_show = Cliente::where('id','=',$id)->first();
+        return view('casos-finalizados.show', compact('caso_show'));
     }
 }

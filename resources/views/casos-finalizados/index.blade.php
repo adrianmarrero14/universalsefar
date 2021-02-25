@@ -42,7 +42,7 @@
                             <th scope="col">Genealogista Ext.</th>
                             <th scope="col">F. Asignación</th>
                             <th scope="col">Lugar de Nac.</th>
-                            <th scope="col">Estado</th>
+                            <th scope="col">Resultado</th>
                             <th scope="col">Árbol</th>
                             <th scope="col">Drive</th>
                             <th scope="col">Detalle</th>
@@ -50,41 +50,35 @@
                     </thead>
                     <tbody>
                         
-                            <tr>
-                                <td class="text-center">
-                                    <a href="">
-                                        <img src="{{ asset('images/FTM_G.png') }}" alt="FTM" width="30px">
-                                    </a>
-                                </td>
-                                <td class="text-center">
-                                    <a href="">
-                                        <img src="{{ asset('images/FTM_G.png') }}" alt="FTM" width="30px">
-                                    </a>
-                                </td>
-                                <td>{}</td>
-                                <td>{}</td>
-                                <td>{}</td>
-                                <td>{}</td>
-                                <td>{}</td>
-                                <td>{}</td>
-                                <td>{}</td>
-                                <td>{}</td>
-                                <td class="text-center">
-                                    <a href="">
-                                        <img src="{{ asset('images/arbol.png') }}" alt="Árbol Genealógico" width="30px">
-                                    </a>
-                                </td>
-                                <td class="text-center">
-                                    <a href="">
-                                        <img src="{{ asset('images/drive.png') }}" alt="Drive" width="30px">
-                                    </a>
-                                </td>
-                                <td class="text-center">
-                                    <a href="{{ URL::to('casos-finalizados/editar') }}">
-                                        <img src="{{ asset('images/editar.png') }}" alt="Editar" width="30px">
-                                    </a>
-                                </td>
-                            </tr> 
+                        @foreach ($casos as $caso)    
+                        <tr>
+                            <td>{{ $caso->sexo }}</td>
+                            <td>{{ $caso->pais_nacimiento }}</td>
+                            <td>{{ $caso->id_cliente }}</td>
+                            <td>{{ $caso->cliente }}</td>
+                            <td>{{ $caso->etiqueta }}</td>
+                            <td>{{ $caso->fs_estudio }}</td>
+                            <td>{{ $caso->gen_ext }}</td>
+                            <td>{{ $caso->fa_estudio }}</td>
+                            <td>{{ $caso->lugar_nacimiento }}</td>
+                            <td>{{ $caso->est_gsc }}</td>
+                            <td class="text-center">
+                                <a href="">
+                                    <img src="{{ asset('images/arbol.png') }}" alt="Árbol Genealógico" width="30px">
+                                </a>
+                            </td>
+                            <td class="text-center">
+                                <a href="{{ $caso->enlace }}">
+                                    <img src="{{ asset('images/drive.png') }}" alt="Drive" width="30px">
+                                </a>
+                            </td>
+                            <td class="text-center">
+                                <a href="{{ URL::to('casos-finalizados/show/'.$caso->id) }}">
+                                    <img src="{{ asset('images/editar.png') }}" alt="Editar" width="30px">
+                                </a>
+                            </td>
+                        </tr> 
+                        @endforeach
                           
                     </tbody>
                 </table>

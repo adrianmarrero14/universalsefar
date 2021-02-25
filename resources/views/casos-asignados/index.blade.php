@@ -56,9 +56,9 @@
                                 <td>{{ $caso->id_cliente }}</td>
                                 <td>{{ $caso->cliente }}</td>
                                 <td>{{ $caso->etiqueta }}</td>
-                                <td>{{ $caso->fecha_registro }}</td>
+                                <td>{{ $caso->fs_estudio }}</td>
                                 <td>{{ $caso->gen_ext }}</td>
-                                <td>{{ $caso->fecha_entrada }}</td>
+                                <td>{{ $caso->fa_estudio }}</td>
                                 <td>{{ $caso->lugar_nacimiento }}</td>
                                 <td>{{ $caso->est_caso_ge }}</td>
                                 <td class="text-center">

@@ -17,9 +17,9 @@
 
     <div class="container-fluid bg-form">
         <div class="container mb-4 ">
-            <h3 class="text-center mt-2">{{ $caso_editar->cliente }}</h3>
-            <h6 class="text-center">N° Identificación: {{ $caso_editar->id }}</h6>
-            <form action="{{ url('casos-asignados/update/'.$caso_editar->id) }}" method="post">
+            <h3 class="text-center mt-2">{{ $caso_show->cliente }}</h3>
+            <h6 class="text-center">N° Identificación: {{ $caso_show->id }}</h6>
+            <form action="#" method="post">
                 <div class="row mt-2 mb-2 pt-2">
                     
                     <div class="col-md-4">
@@ -27,7 +27,7 @@
                         <div class="form-group">
                             <label for="">Nombre completo del cliente:</label>
                             <input type="text" class="form-control border-sefar mb-2" placeholder="Nombre completo del cliente"
-                            id="" name="cliente" value="{{ old('caso_editar', $caso_editar->cliente) }}">
+                            id="" name="cliente" value="{{ old('caso_show', $caso_show->cliente) }}">
                         </div>
 
                         <div class="form-group row">
@@ -35,7 +35,7 @@
                             <div class="col">
                                 <label for="">Sexo:</label>
                                 <select class="form-select border-sefar col mb-2" aria-label="Seleccione formato" name="sexo">
-                                    <option value="{{ old('caso_editar', $caso_editar->sexo) }}">{{ old('caso_editar', $caso_editar->sexo) }}</option>
+                                    <option value="{{ old('caso_show', $caso_show->sexo) }}">{{ old('caso_show', $caso_show->sexo) }}</option>
                                     <option value="M">M</option>
                                     <option value="F">F</option>
                                 </select>
@@ -44,13 +44,13 @@
                             <div class="col">
                                 <label for="">Año Nac.:</label>
                                 <input type="text" class="form-control border-sefar col mb-2" placeholder="Año de Nacimiento"
-                                id="" name="anho_nacimiento" value="{{ old('caso_editar', $caso_editar->anho_nacimiento) }}">
+                                id="" name="anho_nacimiento" value="{{ old('caso_show', $caso_show->anho_nacimiento) }}">
                             </div>
                             
                             <div class="col">
                                 <label for="">Lugar Nac.:</label>
                                 <input type="text" class="form-control border-sefar col mb-2" placeholder="Lugar de Nacimiento"
-                                id="" name="lugar_nacimiento" value="{{ old('caso_editar', $caso_editar->lugar_nacimiento) }}">
+                                id="" name="lugar_nacimiento" value="{{ old('caso_show', $caso_show->lugar_nacimiento) }}">
                             </div>
                             
                             
@@ -60,7 +60,7 @@
                             <div class="col">
                                 <label for="">País de Nacimiento:</label>
                                 <select class="form-select border-sefar col mb-2" aria-label="Seleccione formato" name="pais_nacimiento">
-                                    <option value="{{ old('caso_editar', $caso_editar->pais_nacimiento) }}">{{ old('caso_editar', $caso_editar->pais_nacimiento) }}</option>
+                                    <option value="{{ old('caso_show', $caso_show->pais_nacimiento) }}">{{ old('caso_show', $caso_show->pais_nacimiento) }}</option>
                                     <option value="Alemania">Alemania</option>
                                     <option value="Argentina">Argentina</option>
                                     <option value="Australia">Australia</option>
@@ -92,14 +92,14 @@
                             <div class="col">
                                 <label for="">N° de Pasaporte:</label>
                                 <input type="text" class="form-control border-sefar col mb-2" placeholder="N° de Pasaporte"
-                                id="" name="n_pasaporte" value="{{ old('caso_editar', $caso_editar->n_pasaporte) }}">
+                                id="" name="n_pasaporte" value="{{ old('caso_show', $caso_show->n_pasaporte) }}">
                             </div>
                         </div>
 
                         <div class="form-group">
                             <label for="">País de Pasaporte:</label>
                                 <select class="form-select border-sefar col mb-2" aria-label="Seleccione País" name="pais_pasaporte">
-                                    <option value="{{ old('caso_editar', $caso_editar->pais_pasaporte) }}">{{ old('caso_editar', $caso_editar->pais_pasaporte) }}</option>
+                                    <option value="{{ old('caso_show', $caso_show->pais_pasaporte) }}">{{ old('caso_show', $caso_show->pais_pasaporte) }}</option>
                                     <option value="Alemania">Alemania</option>
                                     <option value="Argentina">Argentina</option>
                                     <option value="Australia">Australia</option>
@@ -131,7 +131,7 @@
                         <div class="form-group">
                             <label for="">¿Tiene familiares realizando el proceso?:</label>
                                 <select class="form-select border-sefar col mb-2" aria-label="Seleccione respuesta" name="familiares">
-                                    <option value="{{ old('caso_editar', $caso_editar->familiares) }}">{{ old('caso_editar', $caso_editar->familiares) }}</option>
+                                    <option value="{{ old('caso_show', $caso_show->familiares) }}">{{ old('caso_show', $caso_show->familiares) }}</option>
                                     <option value="No">No</option>
                                     <option value="Si">Si</option>
                                 </select>
@@ -140,7 +140,7 @@
                         <div class="form-group">
                             <label for=""><strong>Estado general de la solicitud:</strong></label>
                                 <select class="form-select border-sefar col mb-2" aria-label="Seleccione estado" name="est_gsc">
-                                    <option value="{{ old('caso_editar', $caso_editar->est_gsc) }}">{{ old('caso_editar', $caso_editar->est_gsc) }}</option>
+                                    <option value="{{ old('caso_show', $caso_show->est_gsc) }}">{{ old('caso_show', $caso_show->est_gsc) }}</option>
                                     <option value="Aceptado Sefardí">Aceptado Sefardí</option>
                                     <option value="Analisis por Semana">Analisis por Semana</option>
                                     <option value="Carta de Naturaleza">Carta de Naturaleza</option>
@@ -159,7 +159,7 @@
                         <div class="form-group">
                             <label for="">Etiqueta:</label>
                             <select class="form-select border-sefar col mb-2" name="etiqueta" id="">
-                                <option value="{{ old('caso_editar', $caso_editar->etiqueta) }}">{{ old('caso_editar', $caso_editar->etiqueta) }}</option>
+                                <option value="{{ old('caso_show', $caso_show->etiqueta) }}">{{ old('caso_show', $caso_show->etiqueta) }}</option>
                                 <option value="Carta de Naturaleza">Carta de Naturaleza</option>
                                 <option value="Cobrar Analisis por Semana">Cobrar Analisis por Semana</option>
                                 <option value="Cobrar Analisis por Semana / Familia Guarenas">Cobrar Analisis por Semana / Familia Guarenas</option>
@@ -213,7 +213,7 @@
                             <div class="col">
                                 <label for="">Genealogista Sefar:</label>
                                 <select class="form-select border-sefar col mb-2" aria-label="Seleccione formato" name="gen_sefar">
-                                    <option value="{{ old('caso_editar', $caso_editar->gen_sefar) }}">{{ old('caso_editar', $caso_editar->gen_sefar) }}</option>
+                                    <option value="{{ old('caso_show', $caso_show->gen_sefar) }}">{{ old('caso_show', $caso_show->gen_sefar) }}</option>
                                     <option value="Crisanto Bello">Crisanto Bello</option>
                                     <option value="Liliana Du Bois">Liliana Du Bois</option>
                                     <option value="Rosa Hidalgo">Rosa Hidalgo</option>
@@ -225,14 +225,14 @@
                             <div class="col">
                                 <label for="">Abogado del caso:</label>
                                 <input type="text" class="form-control border-sefar col mb-2" placeholder="De (Año)"
-                                id="" name="abogado" value="{{ old('caso_editar', $caso_editar->abogado) }}">
+                                id="" name="abogado" value="{{ old('caso_show', $caso_show->abogado) }}">
                             </div>
                         </div>
 
                         <div class="form-group">                      
                             <label for="">¿Requiere solicitud de estudio de un genealogista?:</label>
                             <select class="form-select border-sefar col mb-2" aria-label="Seleccione formato" name="may_est">
-                                <option value="{{ old('caso_editar', $caso_editar->may_est) }}">{{ old('caso_editar', $caso_editar->may_est) }}</option>
+                                <option value="{{ old('caso_show', $caso_show->may_est) }}">{{ old('caso_show', $caso_show->may_est) }}</option>
                                 <option value="Si">Si</option>
                                 <option value="No">No</option>
                             </select>    
@@ -240,7 +240,7 @@
                         <div class="form-group">
                             <label for="">¿El cliente entregó o se le solicitó mayor información?:</label>
                             <select class="form-select border-sefar col mb-2" aria-label="Seleccione formato" name="may_inf">
-                                <option value="{{ old('caso_editar', $caso_editar->may_inf) }}">{{ old('caso_editar', $caso_editar->may_inf) }}</option>
+                                <option value="{{ old('caso_show', $caso_show->may_inf) }}">{{ old('caso_show', $caso_show->may_inf) }}</option>
                                 <option value="Si">Si</option>
                                 <option value="No">No</option>
                             </select>
@@ -249,7 +249,7 @@
                         <div class="form-group">
                             <label for="">Observaciones:</label>
                             <textarea class="form-control border-sefar col mb-2" aria-label="Seleccione formato" name="observaciones">
-                                {{ old('caso_editar', $caso_editar->observaciones) }}
+                                {{ old('caso_show', $caso_show->observaciones) }}
                             </textarea>
                         </div>
 
@@ -260,13 +260,13 @@
                             <div class="col-6">
                                 <label for="">Fecha registro cliente:</label>
                                 <input type="date" class="form-control border-sefar col mb-2" placeholder="De (Año)"
-                                id="" name="fecha_registro" value="{{ old('caso_editar', $caso_editar->fecha_registro) }}">
+                                id="" name="fecha_registro" value="{{ old('caso_show', $caso_show->fecha_registro) }}">
                             </div>
                             
                             <div class="col-6">
                                 <label for="">Fecha solicitud estudio:</label>
                                 <input type="date" class="form-control border-sefar col mb-2" placeholder="De (Año)"
-                                id="" name="fs_estudio" value="{{ old('caso_editar', $caso_editar->fs_estudio) }}">
+                                id="" name="fs_estudio" value="{{ old('caso_show', $caso_show->fs_estudio) }}">
                             </div>
                         </div>
 
@@ -274,7 +274,7 @@
                             <div class="col">
                                 <label for="">Fecha asignación a genealogista externo:</label>
                                 <input type="date" class="form-control border-sefar col mb-2" placeholder="De (Año)"
-                                id="" name="fa_estudio" value="{{ old('caso_editar', $caso_editar->fa_estudio) }}">
+                                id="" name="fa_estudio" value="{{ old('caso_show', $caso_show->fa_estudio) }}">
                             </div>
                         </div>
                         <div class="text-center mt-1 mb-1">-----</div>
@@ -282,7 +282,7 @@
                         <div class="form-group">
                             <label for="">Nombre:</label>
                                 <select id="" name="gen_ext" class="form-select border-sefar mb-2" name="gen_ext">
-                                    <option value="{{ old('caso_editar', $caso_editar->gen_ext) }}">{{ old('caso_editar', $caso_editar->gen_ext) }}</option>
+                                    <option value="{{ old('caso_show', $caso_show->gen_ext) }}">{{ old('caso_show', $caso_show->gen_ext) }}</option>
                                     <option value="Badaraco">Badaraco</option>  
                                     <option value="Enrique De la Conha">Enrique De la Conha</option>  
                                     <option value="Liliana Du Bois">Liliana Du Bois</option>  
@@ -303,7 +303,7 @@
                         <div class="form-group">
                             <label for="">Estado del Caso:</label>
                                 <select id="" name="est_caso_ge" class="form-select border-sefar mb-2">          
-                                    <option value="{{ old('caso_editar', $caso_editar->est_caso_ge) }}">{{ old('caso_editar', $caso_editar->est_caso_ge) }}</option>  
+                                    <option value="{{ old('caso_show', $caso_show->est_caso_ge) }}">{{ old('caso_show', $caso_show->est_caso_ge) }}</option>  
                                     <option value="Anulado">Anulado</option>  
                                     <option value="En pausa">En pausa</option>  
                                     <option value="En proceso">En proceso</option>  
@@ -318,21 +318,15 @@
                         <div class="form-group">
                             <label for="">Observaciones:</label>
                             <textarea type="text" class="form-control border-sefar mb-2" placeholder="Observaciones"
-                            id="" name="obs_ge">{{ old('caso_editar', $caso_editar->obs_ge) }}</textarea>
+                            id="" name="obs_ge">{{ old('caso_show', $caso_show->obs_ge) }}</textarea>
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col">
-                        <a href="{{ route('casos-asignados') }}" class="btn btn-sefar">
+                        <a href="{{ route('casos-finalizados') }}" class="btn btn-sefar">
                             Regresar
                         </a>
-                    </div>
-                    <div class="col text-end">
-                        @csrf
-                        <button class="btn btn-sefar" type="submit">
-                            Guardar
-                        </button>
                     </div>
                 </div>
             </form>

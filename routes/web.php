@@ -45,6 +45,7 @@ Route::middleware('auth')->group( function (){
 
     Route::get('/casos-finalizados', 'CasosFinalizadosController@index')->name('casos-finalizados');
     Route::get('/casos-finalizados/editar', 'CasosFinalizadosController@edit');
+    Route::get('/casos-finalizados/show/{id}', 'CasosFinalizadosController@show');
 });
 
 Auth::routes();

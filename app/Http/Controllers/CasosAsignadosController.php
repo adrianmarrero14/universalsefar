@@ -31,7 +31,7 @@ class CasosAsignadosController extends Controller
         $caso_editar['n_pasaporte'] = $request->n_pasaporte;
         $caso_editar['pais_pasaporte'] = $request->pais_pasaporte;
         $caso_editar['familiares'] = $request->familiares;
-        $caso_editar['est_caso_ge'] = $request->est_caso_ge;
+        $caso_editar['est_gsc'] = $request->est_gsc;
         $caso_editar['etiqueta'] = $request->etiqueta;
         $caso_editar['gen_sefar'] = $request->gen_sefar;
         $caso_editar['abogado'] = $request->abogado;
