@@ -22,7 +22,7 @@
                     </div>
                     <div class="col-md-4">
                         <form class="d-flex">
-                            <input class="form-control me-2" type="search" placeholder="Buscar Cliente" aria-label="Search">
+                            <input class="form-control me-2" type="search" name="search" placeholder="Buscar Cliente" aria-label="Search">
                             <button class="btn btn-sefar-blue" type="submit">
                                 <img src="{{ asset('images/svg/lupa.svg') }}" width="20px" alt="Buscar">
                             </button>
@@ -66,21 +66,9 @@
                         @endforeach
                     </tbody>
                 </table>
-                <nav aria-label="..." class="mb-4">
-                    <ul class="pagination">
-                        <li class="page-item disabled">
-                            <span class="page-link">Anterior</span>
-                        </li>
-                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                        <li class="page-item" aria-current="page">
-                            <span class="page-link">2</span>
-                        </li>
-                        <li class="page-item"><a class="page-link" href="#">3</a></li>
-                        <li class="page-item">
-                            <a class="page-link" href="#">Siguiente</a>
-                        </li>
-                    </ul>
-                </nav>
+                
+                {{ $familiares->links() }}
+
             </div>
         </div>
         

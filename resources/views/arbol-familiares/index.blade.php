@@ -22,7 +22,7 @@
                     </div>
                     <div class="col-md-4">
                         <form class="d-flex">
-                            <input class="form-control me-2" type="search" placeholder="Buscar Familiar" aria-label="Search">
+                            <input class="form-control me-2" type="search" name="search" placeholder="Buscar Familiar" aria-label="Search">
                             <button class="btn btn-sefar-blue" type="submit">
                                 <img src="{{ asset('images/svg/lupa.svg') }}" width="20px" alt="Buscar">
                             </button>

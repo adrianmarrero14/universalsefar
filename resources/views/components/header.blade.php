@@ -1,13 +1,13 @@
 <header class="">
     <!-- Header Title and User -->
     <nav class="navbar navbar-expand-lg navbar-light bg-principal">
-        <div class="container container-fluid">
+        <div class="container">
         <a class="navbar-brand color-white" href="{{ route('home') }}">Control de Documentos</a>
         <button class="navbar-toggler navbar-togler-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarText">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <div class="collapse navbar-collapse justify-content-end" id="navbarText">
+            <ul class="navbar-nav mb-2 mb-lg-0">
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle color-white" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         {{ Auth::user()->name }}
@@ -34,12 +34,12 @@
 
     <!-- Header Navbar and Links -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container container-fluid">
+        <div class="container">
             <a class="navbar-brand col-sm" href="{{ route('home') }}"><img src="{{ asset('images/logo-sefar.png') }}" alt="SEFAR"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse col-sm" id="navbarNavDropdown">
+            <div class="collapse navbar-collapse justify-content-end col-sm" id="navbarNavDropdown">
                 <ul class="navbar-nav">
                 <li class="nav-item">
                     <a class="nav-link" aria-current="page" href="{{ route('home') }}">Inicio</a>

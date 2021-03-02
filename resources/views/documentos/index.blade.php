@@ -23,11 +23,12 @@
                 </div>
                 <div class="col-md-4">
                     <form class="d-flex">
-                        <input class="form-control me-2" type="search" placeholder="Buscar Documento" aria-label="Search">
+                        <input class="form-control me-2" type="search" name="search" id="search" placeholder="Buscar Documento" aria-label="Search">
                         <button class="btn btn-sefar-blue" type="submit">
                             <img src="{{ asset('images/svg/lupa.svg') }}" width="20px" alt="Buscar">
                         </button>
                     </form>
+                    <div id="resultados"></div>
                 </div>
             </div>
 
@@ -48,24 +49,24 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($documentos as $doc)
+                    @foreach ($documentos as $documento)
                         <tr>
-                            <th scope="row">{{ $doc->id }}</th>
-                            <td>{{ $doc->documento }}</td>
-                            <td>{{ $doc->fecha_incorporacion }}</td>
-                            <td>{{ $doc->formato }}</td>
-                            <td>{{ $doc->tipo }}</td>
-                            <td>{{ $doc->anho_ini }}</td>
-                            <td>{{ $doc->anho_fin }}</td>
-                            <td>{{ $doc->pais }}</td>
-                            <td>{{ $doc->ciudad }}</td>
+                            <th scope="row">{{ $documento->id }}</th>
+                            <td>{{ $documento->documento }}</td>
+                            <td>{{ $documento->fecha_incorporacion }}</td>
+                            <td>{{ $documento->formato }}</td>
+                            <td>{{ $documento->tipo }}</td>
+                            <td>{{ $documento->anho_ini }}</td>
+                            <td>{{ $documento->anho_fin }}</td>
+                            <td>{{ $documento->pais }}</td>
+                            <td>{{ $documento->ciudad }}</td>
                             <td class="text-center">
-                                <a href="{{ $doc->enlace }}">
+                                <a href="{{ $documento->enlace }}">
                                     <img src="{{ asset('images/drive.png') }}" alt="Drive" width="30px">
                                 </a>
                             </td>
                             <td class="text-center">
-                                <a href="{{ URL::to('documentos/editar/'.$doc->id) }}">
+                                <a href="{{ URL::to('documentos/editar/'.$documento->id) }}">
                                     <img src="{{ asset('images/editar.png') }}" alt="Editar" width="30px">
                                 </a>
                             </td>
@@ -85,5 +86,10 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
 
+    <!-- Buscador Script -->
+    <script>
+        let texto = document.getElementById('search')
+        
+    </script>
 </body>
 </html>

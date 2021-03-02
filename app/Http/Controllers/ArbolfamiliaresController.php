@@ -7,9 +7,18 @@ use App\Models\AgCliente;
 
 class ArbolFamiliaresController extends Controller
 {
-    function index()
+    function index(Request $request)
     {
         $familiares = AgCliente::latest()->paginate('10');
+
+        // Buscador
+        $busqueda = $request->get('search');
+        $resultados = AgCliente::where('nombres','like',"%$busqueda%")->paginate('10');
+
+        if($busqueda){
+            $familiares = $resultados;
+        }
+
         return view('arbol-familiares.index', compact('familiares'));
     }
 

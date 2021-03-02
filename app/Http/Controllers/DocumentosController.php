@@ -12,9 +12,18 @@ class DocumentosController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
         $documentos = Bd::latest()->orderBy('fecha_incorporacion', 'desc')->paginate('10');
+
+        // Buscador
+        $busqueda = $request->get('search');
+        $resultados = Bd::where('documento','like',"%$busqueda%")->paginate('10');
+
+        if($busqueda){
+            $documentos = $resultados;
+        }
+
         return view('documentos.index', compact('documentos'));
     }
 

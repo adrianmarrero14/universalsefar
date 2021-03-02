@@ -12,9 +12,18 @@ class ArbolClientesController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
         $clientes = Cliente::latest()->paginate('10');
+
+        // Buscador
+        $busqueda = $request->get('search');
+        $resultados = Cliente::where('nombres','like',"%$busqueda%")->paginate('10');
+
+        if($busqueda){
+            $clientes = $resultados;
+        }
+
         return view('arbol-clientes.index', compact('clientes'));
     }
 
