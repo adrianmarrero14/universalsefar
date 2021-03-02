@@ -15,7 +15,7 @@
         <!-- Header Component -->
         <x-header/>
 
-        <div class="container-fluid">
+        <div class="container-fluid bg-form">
             <div class="container">
                 <div class="row mt-4 mb-3">
                     <div class="col-md-8">
